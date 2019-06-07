@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>background-attachment demo</title>
+    <style>
+        body{
+            min-width: 900px;
+        }
+
+        p {
+            color: orangered;
+        }
+
+        div {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            padding: 30px;
+            border: 10px dashed pink;
+            position: relative;
+            overflow-y: scroll;
+            background-color: skyblue;
+            background-image: url('image/cat.png');
+        }
+
+        div span {
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            right: 0;
+            width: 100px;
+            margin: auto;
+            text-align: center;
+            background: #fff;
+        }
+
+        .bg2 {
+            background-attachment: fixed;
+        }
+
+        .bg3 {
+            background-attachment: local;
+        }
+
+    </style>
+</head>
+<body>
+<p>background-attachment示例</p>
+<p>*盒子模型属性: 宽高200px, 内边距30px, 边框5px</p>
+<div class="bg1"><span>scroll</span>
+    <p style="height: 500px"></p></div>
+<div class="bg2"><span>fixed</span>
+    <p style="height: 500px"></p></div>
+<div class="bg3"><span>local</span>
+    <p style="height: 500px"></p></div>
+
+<span style="display: block;height: 1000px"></span>
+
+</body>
+</html>
